@@ -1,0 +1,38 @@
+/** @format */
+.layerWrap {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+}
+
+.labelWrap {
+  height: 28rem;
+  width: 28rem;
+}
+
+@media only screen and (min-width: 32em) {
+  .labelWrap {
+    min-height: 28rem;
+    min-width: 28rem;
+    height: 50%;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,27 @@
+@import '~/styles/_partials.scss';
+
+.section{
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+      h1{
+        font-family: $font-styled;
+        font-size: 2rem;
+        
+    }
+    p{
+        font-family: $font-main;
+               font-size: 1.2rem;
+               font-weight: 300;
+               line-height:1.8rem;
+               
+    }
+}
+
+.text{
+        color: white;
+        text-align:center;
+    }

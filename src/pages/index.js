@@ -9,20 +9,20 @@ import Video from '../components/Video/index';
 import ActionCall from '../components/ActionCall/index';
 import Footer from '../components/Footer/index';
 import '../styles/main.scss';
-import SEO from "../components/SEO/SEO"
+import SEO from '../components/SEO/SEO';
 
 // markup
 const IndexPage = () => {
   return (
     <>
-    <SEO title="Home" />
+      <SEO title='Richboymafia.Recordlabel' />
       <Hero />
-       <About />
-<Artist />
+      <About />
+      <Artist />
       <Music />
       <Video />
-<ActionCall />
-       <Footer />
+      <ActionCall />
+      <Footer />
     </>
   );
 };

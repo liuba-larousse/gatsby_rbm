@@ -1,51 +1,46 @@
+/** @format */
+
 @import '~/styles/_partials.scss';
 
-.section{
-    margin-top: 15rem;
-  
-    
-                flex-direction: column;
-     h1{
-        font-family: $font-styled;
-        font-size: 2rem;
-        
-    }
-    p{
-        font-family: $font-main;
-               font-size: 1.2rem;
-               font-weight: 300;
-               line-height:1.8rem;
-    }
-
+.section {
+  flex-direction: column;
+  h1 {
+    font-family: $font-styled;
+    font-size: 2rem;
+  }
+  p {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+  }
 }
- .text{
-        width: 90%;
-        margin: 0 auto;
-        color: $black;
-    }
+.text {
+  width: 90%;
+  margin: 0 auto;
+  color: $black;
+}
 
-    .imageWrap{
-        width: 80%;
-        max-height: 40rem;
-    }
+.imageWrap {
+  width: 80%;
+  max-height: 40rem;
+}
 
-     @media only screen and (min-width: $bp) {
-
-         .section{
-             width: 80%;
-             margin-left: 15%;
-             display: flex;
-             flex-direction: row;
-
-         }
-         .imageWrap{
-             order: 1;
-         }
-         .text{
-             order:2;
-             margin-left: 5%;
-               display: flex;
-             flex-direction: column;
-             justify-content: flex-end;
-         }
-     }
+@media only screen and (min-width: $bp) {
+  .section {
+    width: 80%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: row;
+  }
+  .imageWrap {
+    order: 1;
+  }
+  .text {
+    order: 2;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}

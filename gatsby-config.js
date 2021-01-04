@@ -5,7 +5,10 @@ module.exports = {
   siteMetadata: {
     title: 'Richboymafia',
      description: 'Recordlabel Beats Studio',
-            author: 'liuba.larousse'
+            author: 'liuba.larousse',
+                url: "https://www.richboymafia.com", 
+                image: "~/images/hero.jpg"// No trailing slash allowed!
+
   },
   plugins: [
     'gatsby-plugin-sharp',

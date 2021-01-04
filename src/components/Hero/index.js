@@ -8,10 +8,7 @@ import s from './styles.module.scss';
 import { mainButton } from '~/styles/components.module.scss';
 import { IoIosArrowDown } from 'react-icons/io';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import { Link } from "gatsby"
-
-
-
+import { Link } from 'gatsby';
 
 export default function Hero() {
   const data = useStaticQuery(
@@ -44,13 +41,21 @@ export default function Hero() {
       fluid={backgroundImage}
     >
       <div className={s.layerWrap}>
-        <Link to="https://pocketsuite.io/book/richboymafia"><button className={`${mainButton} ${s.button}`}>book now</button></Link>
+        <Link to='https://pocketsuite.io/book/richboymafia'>
+          <button className={`${mainButton} ${s.button}`}>
+            book now
+          </button>
+        </Link>
         <div className={s.labelWrap}>
           <Image className={s.label} fluid={labelImage} />
         </div>
-        <button className={s.icon} onClick={() => scrollTo('#about')}><IoIosArrowDown /></button>
-
-       
+        <button
+          className={s.icon}
+          aria-label='scroll'
+          onClick={() => scrollTo('#about')}
+        >
+          <IoIosArrowDown />
+        </button>
       </div>
     </BackgroundImage>
   );

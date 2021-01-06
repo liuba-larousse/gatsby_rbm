@@ -24,6 +24,23 @@
   margin: 0 auto;
   color: $black;
 }
+p.name {
+  color: $red;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+.icon {
+  font-size: 1.2rem;
+  padding-left: 0rem;
+  transition: all 0.3s ease-in-out;
+}
+
+p.name:hover {
+  .icon {
+    margin-left: 0.5rem;
+  }
+}
 
 .imageWrap {
   position: relative;

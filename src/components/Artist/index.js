@@ -1,10 +1,11 @@
 /** @format */
 
-import React from 'react';
-
+import React, { Fragment } from 'react';
+import { Link } from 'gatsby';
 import { useStaticQuery, graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import s from './styles.module.scss';
+import { IoIosArrowForward } from 'react-icons/io';
 
 export default function Artist() {
   const data = useStaticQuery(graphql`
@@ -23,6 +24,9 @@ export default function Artist() {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
+      fragment: googleSpreadsheetContent {
+        ...PageFields
+      }
     }
   `);
 
@@ -35,13 +39,14 @@ export default function Artist() {
         <Image fluid={imageDataFirst} />
       </div>
       <div className={s.text}>
-        <h1>feautred artist</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing
-          elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam
-          voluptua.{' '}
-        </p>
+        <h1>{data.fragment.artistTitle}</h1>
+        <Link to='https://www.youtube.com/channel/UCANF5DEVyxi8OJK53AksGzg'>
+          <p className={s.name}>
+            Scotty Jamz
+            <IoIosArrowForward className={s.icon} />
+          </p>
+        </Link>
+        <p>{data.fragment.artistText}</p>
       </div>
       <div className={s.imageWrapSecond}>
         <Image fluid={imageDataSecond} />

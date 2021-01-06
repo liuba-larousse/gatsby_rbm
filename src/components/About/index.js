@@ -16,6 +16,9 @@ export default function About() {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
+      fragment: googleSpreadsheetContent {
+        ...PageFields
+      }
     }
   `);
 
@@ -26,15 +29,8 @@ export default function About() {
         <Svg />
       </div>
       <div className={s.text}>
-        <h1>RICH BOY MAFIA</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing
-          elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam
-          voluptua. At vero eos et accusam et justo duo
-          dolores et ea rebum. Stet clita kasd gubergren, no
-          sea takimata sanctus .
-        </p>
+        <h1>{data.fragment.aboutTitle}</h1>
+        <p>{data.fragment.aboutText}</p>
       </div>
       <div className={s.imageWrap}>
         <Image fluid={imageData} />

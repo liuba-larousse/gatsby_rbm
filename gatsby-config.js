@@ -1,5 +1,8 @@
 /** @format */
 const path = require('path');
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 module.exports = {
   siteMetadata: {
@@ -21,6 +24,21 @@ module.exports = {
         '~': path.join(__dirname, 'src/'),
       },
     },
+    {
+      resolve: 'gatsby-source-google-spreadsheet',
+      options: {
+        spreadsheetId:
+          '1YmFasxCXF11SzdXGHo61u01qKTqxDcJWAjjduTGgXLA',
+        // spreadsheetName: "MySheet",
+        // typePrefix: "GoogleSpreadsheet"
+        credentials: JSON.parse(
+          process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS
+        ),
+        filterNode: () => true,
+        mapNode: (node) => node,
+      },
+    },
+
     {
       resolve: 'gatsby-source-filesystem',
       options: {

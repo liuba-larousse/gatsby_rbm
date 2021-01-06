@@ -38,7 +38,10 @@ export default function Music() {
         <p>{data.fragment.musicText}</p>
       </div>
       <div className={s.imageWrap}>
-        <Image fluid={dataImage} />
+        <Image
+          fluid={dataImage}
+          alt={data.fragment.artistTitle}
+        />
         <div className={s.svg}>
           <Svg />
         </div>

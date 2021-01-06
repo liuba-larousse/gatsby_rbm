@@ -36,7 +36,10 @@ export default function Video() {
         <p>{data.fragment.videoText}</p>
       </div>
       <div className={s.imageWrap}>
-        <Image fluid={dataImage} />
+        <Image
+          fluid={dataImage}
+          alt={data.fragment.artistTitle}
+        />
       </div>
     </section>
   );

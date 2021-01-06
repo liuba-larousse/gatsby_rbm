@@ -33,7 +33,7 @@ export default function About() {
         <p>{data.fragment.aboutText}</p>
       </div>
       <div className={s.imageWrap}>
-        <Image fluid={imageData} />
+        <Image fluid={imageData} alt='mixing console' />
       </div>
     </section>
   );

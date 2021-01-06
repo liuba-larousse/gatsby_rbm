@@ -36,7 +36,10 @@ export default function Artist() {
   return (
     <section className={s.section}>
       <div className={s.imageWrapFirst}>
-        <Image fluid={imageDataFirst} />
+        <Image
+          fluid={imageDataFirst}
+          alt={data.fragment.artistTitle}
+        />
       </div>
       <div className={s.text}>
         <h1>{data.fragment.artistTitle}</h1>

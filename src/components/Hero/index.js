@@ -41,7 +41,10 @@ export default function Hero() {
       fluid={backgroundImage}
     >
       <div className={s.layerWrap}>
-        <Link to='https://pocketsuite.io/book/richboymafia'>
+        <Link
+          to='https://pocketsuite.io/book/richboymafia'
+          alt='label'
+        >
           <button className={`${mainButton} ${s.button}`}>
             book now
           </button>

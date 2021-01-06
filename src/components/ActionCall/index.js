@@ -32,7 +32,7 @@ export default function ActionCall() {
     <section className={s.section}>
       <div className={s.labelWrap}>
         {' '}
-        <Image fluid={labelImage} />
+        <Image fluid={labelImage} alt='label' />
       </div>
       <div className={s.text}>
         <h1>{data.fragment.workWithUsTitle}</h1>

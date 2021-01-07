@@ -21,8 +21,9 @@ export default function Hero() {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
+
         label: imageSharp(
-          fluid: { originalName: { eq: "labelwhite.png" } }
+          fluid: { originalName: { eq: "label.png" } }
         ) {
           fluid(fit: COVER) {
             ...GatsbyImageSharpFluid_withWebp

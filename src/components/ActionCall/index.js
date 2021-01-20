@@ -36,7 +36,7 @@ export default function ActionCall() {
       </div>
       <div className={s.text}>
         <h1>{data.fragment.workWithUsTitle}</h1>
-        <p>{data.fragment.workWithUsText}</p>
+        {/* <p>{data.fragment.workWithUsText}</p> */}
         <Link to='https://pocketsuite.io/book/richboymafia'>
           <button className={`${mainButton} ${s.button}`}>
             book now

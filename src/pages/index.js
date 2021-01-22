@@ -15,7 +15,7 @@ import SEO from '../components/SEO/SEO';
 const IndexPage = () => {
   return (
     <>
-      <SEO title='Richboymafia.Recordlabel' />
+      <SEO title='Independent Record Label' />
       <Hero />
       <About />
       <Artist />

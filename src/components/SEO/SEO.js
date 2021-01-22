@@ -39,6 +39,8 @@ function SEO({ description, title, image, url }) {
       <title>{defaultTitle}</title>
       <meta name='description' content={metaDescription} />
       <meta name='image' content={metaImage} />
+      <meta property='og:image:width' content='1200' />
+      <meta property='og:image:height' content='630' />
       <link rel='canonical' href={url} />
 
       {/* OpenGraph tags */}

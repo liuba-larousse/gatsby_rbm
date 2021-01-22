@@ -10,8 +10,8 @@ export default function Footer() {
         <h1>contact us</h1>
         <p>AUSTIN, TX</p>
         <p>
-          <a href='mailto:info@richboymafia.com'>
-            info@richboymafia.com
+          <a href='mailto:Richboymafiarecords@gmail.com'>
+            Richboymafiarecords@gmail.com
           </a>
         </p>
       </div>

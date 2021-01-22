@@ -12,7 +12,7 @@ module.exports = {
     author: 'liuba.larousse',
     url: 'https://www.richboymafia.com',
     image:
-      'https://www.richboymafia.com/static/c14076a512f6166780d9a70f9597a9c1/7c22d/about.webp', // No trailing slash allowed!
+      'https://static/c14076a512f6166780d9a70f9597a9c1/7c22d/about.webp', // No trailing slash allowed!
   },
   plugins: [
     'gatsby-plugin-sharp',

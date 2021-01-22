@@ -11,7 +11,7 @@ export default function Video() {
   const data = useStaticQuery(graphql`
     {
       imageSharp(
-        fluid: { originalName: { eq: "video.jpg" } }
+        fluid: { originalName: { eq: "videoBW.jpg" } }
       ) {
         fluid(fit: COVER) {
           ...GatsbyImageSharpFluid_withWebp

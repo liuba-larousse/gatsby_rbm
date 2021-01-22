@@ -47,5 +47,8 @@ module.exports = {
       },
       __key: 'images',
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+    },
   ],
 };

@@ -12,14 +12,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({
-  description,
-  lang,
-  meta,
-  title,
-  image,
-  url,
-}) {
+function SEO({ description, title, image, url }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -42,66 +35,44 @@ function SEO({
   const metaImage = site.siteMetadata.image;
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={
-        defaultTitle ? `%s | ${defaultTitle}` : null
-      }
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: metaImage,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <Helmet>
+      <title>{defaultTitle}</title>
+      <meta name='description' content={metaDescription} />
+      <meta name='image' content={metaImage} />
+      <link rel='canonical' href={url} />
+
+      {/* OpenGraph tags */}
+      <meta property='og:url' content={url} />
+
+      <meta property='og:title' content={title} />
+      <meta
+        property='og:description'
+        content={description}
+      />
+      <meta property='og:image' content={image} />
+
+      {/* Twitter Card tags */}
+      <meta
+        name='twitter:card'
+        content='summary_large_image'
+      />
+
+      <meta name='twitter:title' content={title} />
+      <meta
+        name='twitter:description'
+        content={description}
+      />
+      <meta name='twitter:image' content={metaImage} />
+    </Helmet>
   );
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
   description: ``,
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 };
 
